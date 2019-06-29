@@ -66,31 +66,32 @@ function drawFood() {
   canvas2dObj.restore();
 }
 
+// shortend operators 
 function updateSnakeList() {
   for (var i = snakeList.length - 1; i >= 0; i--) {
     if (direction == 0) {
-      if (i == 0) { // if the snakes head
+      if (i == 0) {
         snakeList[i].x = snakeList[i].x - snakeBody.speedX;
       } else {
         snakeList[i].x = snakeList[i - 1].x;
         snakeList[i].y = snakeList[i - 1].y;
       }
     } else if (direction == 1) {
-      if (i == 0) { // if the snakes head
+      if (i == 0) { 
         snakeList[i].y = snakeList[i].y - snakeBody.speedY;
       } else {
         snakeList[i].x = snakeList[i - 1].x;
         snakeList[i].y = snakeList[i - 1].y;
       }
     } else if (direction == 2) {
-      if (i == 0) { // if the snakes head
+      if (i == 0) { 
         snakeList[i].x = snakeList[i].x + snakeBody.speedX;
       } else {
         snakeList[i].x = snakeList[i - 1].x;
         snakeList[i].y = snakeList[i - 1].y;
       }
     } else if (direction == 3) {
-      if (i == 0) { // if the snakes head
+      if (i == 0) { 
         snakeList[i].y = snakeList[i].y + snakeBody.speedY;
       } else {
         snakeList[i].x = snakeList[i - 1].x;
@@ -100,6 +101,7 @@ function updateSnakeList() {
   }
 }
 
+// Create a function for randomized x and y food positions
 function updateFoodPosition() {
   while (eaten === true) {
     let posX = Math.floor(Math.random() * 450) + 30;
