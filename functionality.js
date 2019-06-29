@@ -12,6 +12,7 @@ let timer;
 canvas2dObj.font = '20px calibri';
 
 //Snake factory function
+// change to new class syntax 
 function createSnakeBody() {
   return {
     width: 20,
@@ -57,6 +58,7 @@ function drawSnake() {
   canvas2dObj.restore();
 };
 
+// abstract the method
 function drawFood() {
   canvas2dObj.save();
   canvas2dObj.fillStyle = food.color;
@@ -116,6 +118,7 @@ const updateSnakeSpeed = () => {
   snakeBody.speedY = snakeBody.speedY + 4;
 };
 
+// change to WIDTH VALUES
 // returns boolean true if a wall was encounterd
 function checkPosition() {
   if (snakeList[0].x === 0 || snakeList[0].y === 0 ||
