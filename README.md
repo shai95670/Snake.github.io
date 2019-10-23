@@ -1,5 +1,5 @@
 # Snake_Game
-Snake game written with js,html
+Snake game written with js,html,css
 
 TODO:
 -----------------------------------
